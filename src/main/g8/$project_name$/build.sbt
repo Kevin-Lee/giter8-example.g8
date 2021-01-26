@@ -1,7 +1,7 @@
-ThisBuild / scalaVersion := "2.13.4"
+ThisBuild / scalaVersion := "$scalaVersion$"
 ThisBuild / version := SbtProjectInfo.ProjectVersion
-ThisBuild / organization := "io.kevinlee"
-ThisBuild / organizationName := ""
+ThisBuild / organization := "$organization$"
+ThisBuild / organizationName := "$organizationName$"
 ThisBuild / developers := List(
   Developer(
     props.GitHubUsername,
@@ -29,7 +29,7 @@ lazy val props =
   new {
     val GitHubUsername = "$github_username$"
     val RepoName       = "$repo_name$"
-    val ProjectName    = RepoName
+    val ProjectName    = "$project_name$"
   }
 
 lazy val noPublish: SettingsDefinition = Seq(
