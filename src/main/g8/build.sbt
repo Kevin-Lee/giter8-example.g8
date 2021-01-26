@@ -1,4 +1,4 @@
-ThisBuild / scalaVersion := "$scala_version"
+ThisBuild / scalaVersion := "$scala_version$"
 ThisBuild / version := SbtProjectInfo.ProjectVersion
 ThisBuild / organization := "$org$"
 ThisBuild / organizationName := ""
@@ -7,15 +7,15 @@ ThisBuild / developers := List(
     props.GitHubUsername,
     "$author_name$",
     "$author_email$",
-    url(s"https://github.com/${props.GitHubUsername}"),
+    url(s"https://github.com/$${props.GitHubUsername}"),
   )
 )
-ThisBuild / homepage := Some(url(s"https://github.com/${props.GitHubUsername}/${props.RepoName}"))
+ThisBuild / homepage := Some(url(s"https://github.com/$${props.GitHubUsername}/$${props.RepoName}"))
 ThisBuild / scmInfo :=
   Some(
     ScmInfo(
-      url(s"https://github.com/${props.GitHubUsername}/${props.RepoName}"),
-      s"https://github.com/${props.GitHubUsername}/${props.RepoName}.git",
+      url(s"https://github.com/$${props.GitHubUsername}/$${props.RepoName}"),
+      s"https://github.com/$${props.GitHubUsername}/$${props.RepoName}.git",
     )
   )
 
