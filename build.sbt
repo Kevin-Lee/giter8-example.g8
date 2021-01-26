@@ -41,7 +41,7 @@ lazy val root = (project in file("."))
 lazy val props =
   new {
     val GitHubUsername = "Kevin-Lee"
-    val ProjectName    = "giter8-example"
+    val ProjectName    = "$project_name$"
     val RepoName       = s"$ProjectName.g8"
   }
 
