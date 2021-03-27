@@ -41,8 +41,8 @@ lazy val root = (project in file("."))
 lazy val props =
   new {
     val GitHubUsername = "Kevin-Lee"
-    val ProjectName    = "$project_name$"
-    val RepoName       = s"$ProjectName.g8"
+    val ProjectName    = "example-project"
+    val RepoName       = "giter8-example.g8"
   }
 
 lazy val noPublish: SettingsDefinition = Seq(
